@@ -1,0 +1,66 @@
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $body-font;
+  display: flex;
+  flex-direction: column;
+  background-color: $body-bg;
+  color: $font-color;
+  font-size: 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a:active,
+a:active * {
+  outline: none !important;
+}
+
+a:focus,
+a:focus * {
+  outline: none !important;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+}
+
+input,
+textarea {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+ul {
+  @extend %list-style;
+}

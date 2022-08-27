@@ -1,0 +1,29 @@
+@use "sass:math";
+
+@function get-vw($target) {
+  $vw-context: (1920*.01) * 1px;
+  @return math.div($target, $vw-context) * 1vw;
+}
+
+@function get-vh($target) {
+  $vh-context: (1050*.01) * 1px;
+  @return math.div($target, $vh-context) * 1vh;
+}
+
+
+%list-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@function texto3d($numero, $color) {
+  $text-shadow: 2px 2px $color;
+
+  @for $i from 1 through $numero {
+    $text-shadow: '#{$text-shadow},#{$i}px #{$i}px #{$color}';
+
+  }
+
+  @return unquote($text-shadow);
+}

@@ -1,0 +1,29 @@
+.hamburger {
+  padding: 0;
+}
+
+.hamburger:hover,
+.hamburger.is-active:hover {
+  opacity: 1;
+}
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  background-color: var(--color-main);
+}
+
+.hamburger.is-active {
+
+  .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before {
+    background-color: var(--color-main);
+  }
+}
+
+.toggle-menu{
+  @include from(l){
+    display: none;
+  }
+}
