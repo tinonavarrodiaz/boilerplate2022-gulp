@@ -1,8 +1,0 @@
-extends ../config/template
-append config
-  -pageTitle = ''
-  -pageDescription = ''
-  -pageImage = ''
-
-block main
-    h1 Hola mundo
